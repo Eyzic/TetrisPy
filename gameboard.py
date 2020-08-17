@@ -83,3 +83,15 @@ class GameBoard:
         for number in line_numbers:
            for i in range(self.width):
                self.game_board[i][number].color = (255,192,1)
+
+    def remove_lines(self, line_numbers):
+        for number in line_numbers:
+           self.remove_line(number)
+               
+    def remove_line(self, line_number):
+            self.move_down_until_line(line_number) 
+  
+    def move_down_until_line(self, line_number):
+        for i in reversed(range(line_number)):
+            for j in range(self.width):
+               self.game_board[j][i+1].color = self.game_board[j][i].color

@@ -43,7 +43,8 @@ def main():
            lines = game_board.get_finished_lines()   #Returns a list of finished line numbers or empty if none
            if lines:
               game_board.color_lines(lines)
-              score += level * BASE_POINT * len(lines)		  
+              score += level * BASE_POINT * len(lines)
+              game_board.remove_lines(lines)  
               if score >= LEVEL_GAP:
                  level += 1
            tetrimino = Shape()   #Spawn a new shape at the top

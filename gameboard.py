@@ -76,7 +76,6 @@ class GameBoard:
                if self.game_board[j][i].color != (0,0,0):
                   counter += 1
             if counter == 10:
-               print("LINE: " + str(i))
                finished_lines.append(i)
         return finished_lines
 

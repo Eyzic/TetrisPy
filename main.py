@@ -64,8 +64,8 @@ def main():
             if event.type == pygame.KEYDOWN:
                # if event.key == pygame.K_SPACE:
               #      tetrimino.dunk(game_board)
-               # if event.key == pygame.K_UP:
-               #     tetrimino.rotate(game_board)
+                if event.key == pygame.K_UP:
+                    tetrimino.rotate(game_board)
                 if event.key == pygame.K_LEFT:
                     tetrimino.move_left(game_board)
                 if event.key == pygame.K_RIGHT:
